@@ -5,10 +5,11 @@ import {
   type ReactNode,
   type CSSProperties,
 } from 'react'
-import { gsap } from 'gsap'
+import gsapModule from 'gsap'
 import ScrollTriggerModule from 'gsap/ScrollTrigger'
 import { Cursor } from './Cursor'
 
+const gsap = (gsapModule as { gsap?: typeof gsapModule }).gsap ?? gsapModule
 const ScrollTrigger =
   (ScrollTriggerModule as { ScrollTrigger?: typeof ScrollTriggerModule }).ScrollTrigger ??
   ScrollTriggerModule
