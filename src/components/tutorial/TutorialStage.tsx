@@ -6,8 +6,12 @@ import {
   type CSSProperties,
 } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ScrollTriggerModule from 'gsap/ScrollTrigger'
 import { Cursor } from './Cursor'
+
+const ScrollTrigger =
+  (ScrollTriggerModule as { ScrollTrigger?: typeof ScrollTriggerModule }).ScrollTrigger ??
+  ScrollTriggerModule
 
 let stRegistered = false
 
