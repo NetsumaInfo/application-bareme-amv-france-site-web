@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import { gsap } from 'gsap'
+import gsapModule from 'gsap'
 import ScrollTriggerModule from 'gsap/ScrollTrigger'
 
+const gsap = (gsapModule as { gsap?: typeof gsapModule }).gsap ?? gsapModule
 const ScrollTrigger =
   (ScrollTriggerModule as { ScrollTrigger?: typeof ScrollTriggerModule }).ScrollTrigger ??
   ScrollTriggerModule
